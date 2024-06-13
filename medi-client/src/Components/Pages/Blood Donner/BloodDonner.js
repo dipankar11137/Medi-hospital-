@@ -1,113 +1,38 @@
 import React from 'react';
-import Footer from '../../Share/Footer';
 
-const BloodDonner = () => {
-   const handleCall = () => {
-     window.location.href = 'tel:+1234567890'; 
-   };
+const BloodDonner = ({donner,index}) => {
+   const backgroundClass =
+     index % 8 === 0
+       ? 'bg-red-600'
+       : index % 7 === 0
+       ? 'bg-blue-500'
+       : index % 6 === 0
+       ? 'bg-yellow-600'
+       : index % 5 === 0
+       ? 'bg-green-700'
+       : index % 4 === 0
+       ? 'bg-purple-500'
+       : index % 3 === 0
+       ? 'bg-pink-500'
+       : index % 2 === 0
+       ? 'bg-indigo-500'
+       : 'bg-lime-600';
   return (
-    <div className="pt-20 ">
-      <div className="grid grid-cols-4 mx-5 mb-10">
-        <div className="text-center text-xl bg-indigo-700 p-14 text-white">
-          <h1 className="text-3xl font-semibold">A (+ve)</h1>
-          <h1>Available : 0</h1>
-          <h1>Regular Donner : 32</h1>
-          <h1>+8801752468054</h1>
-          <button
-            onClick={handleCall}
-            className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-xl mt-2"
-          >
-            Call Now
-          </button>
-        </div>
-        <div className="text-center text-xl bg-orange-700 p-14 text-white">
-          <h1 className="text-3xl font-semibold">A (-ve)</h1>
-          <h1>Available : 15</h1>
-          <h1>Regular Donner : 42</h1>
-          <h1>+8801752468054</h1>
-          <button
-            onClick={handleCall}
-            className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-xl mt-2"
-          >
-            Call Now
-          </button>
-        </div>
-        <div className="text-center text-xl bg-violet-700 p-14 text-white">
-          <h1 className="text-3xl font-semibold">B (+ve)</h1>
-          <h1>Available : 45</h1>
-          <h1>Regular Donner : 132</h1>
-          <h1>+8801752468054</h1>
-          <button
-            onClick={handleCall}
-            className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-xl mt-2"
-          >
-            Call Now
-          </button>
-        </div>
-        <div className="text-center text-xl bg-green-700 p-14 text-white">
-          <h1 className="text-3xl font-semibold">B (-ve)</h1>
-          <h1>Available : 25</h1>
-          <h1>Regular Donner : 75</h1>
-          <h1>+8801752468054</h1>
-          <button
-            onClick={handleCall}
-            className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-xl mt-2"
-          >
-            Call Now
-          </button>
-        </div>
+    <div
+      className={`${backgroundClass} text-center text-xl bg-indigo-700 text-white pb-3`}
+    >
+      <div>
+        <img className="w-full h-40" src={donner?.img} alt="" />
       </div>
-      <div className="grid grid-cols-4 mx-5 mb-10">
-        <div className="text-center text-xl bg-lime-700 p-14 text-white">
-          <h1 className="text-3xl font-semibold">O (+ve)</h1>
-          <h1>Available : 5</h1>
-          <h1>Regular Donner : 88</h1>
-          <h1>+8801752468054</h1>
-          <button
-            onClick={handleCall}
-            className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-xl mt-2"
-          >
-            Call Now
-          </button>
-        </div>
-        <div className="text-center text-xl bg-blue-700 p-14 text-white">
-          <h1 className="text-3xl font-semibold">O (-ve)</h1>
-          <h1>Available : 0</h1>
-          <h1>Regular Donner : 55</h1>
-          <h1>+8801752468054</h1>
-          <button
-            onClick={handleCall}
-            className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-xl mt-2"
-          >
-            Call Now
-          </button>
-        </div>
-        <div className="text-center text-xl bg-pink-700 p-14 text-white">
-          <h1 className="text-3xl font-semibold">AB (+ve)</h1>
-          <h1>Available : 12</h1>
-          <h1>Regular Donner : 43</h1>
-          <h1>+8801752468054</h1>
-          <button
-            onClick={handleCall}
-            className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-xl mt-2"
-          >
-            Call Now
-          </button>
-        </div>
-        <div className="text-center text-xl bg-stone-700 p-14 text-white">
-          <h1 className="text-3xl font-semibold">AB (-ve)</h1>
-          <h1>Available : 10</h1>
-          <h1>Regular Donner : 25</h1>
-          <h1>+8801752468054</h1>
-          <button
-            onClick={handleCall}
-            className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-xl mt-2"
-          >
-            Call Now
-          </button>
-        </div>
+      <div className="mt-2">
+        <h1 className="text-3xl font-semibold">{donner?.bloodGroup}</h1>
+        <h1>{donner?.name}</h1>
+        <h1>{donner?.phone}</h1>
+        <h1>{donner?.address}</h1>
+        <button className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-xl mt-2">
+          Call Now
+        </button>
       </div>
-      <Footer />
     </div>
   );
 };
