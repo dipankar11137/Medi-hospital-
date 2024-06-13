@@ -23,13 +23,17 @@ async function run() {
   try {
     await client.connect();
 
-    const userCollection = client.db('hospital2').collection('user');
+    const userCollection = client.db('hospitalWithBlood').collection('user');
     const appointmentCollection = client
-      .db('hospital2')
+      .db('hospitalWithBlood')
       .collection('appointments');
 
-    const bookingCollection = client.db('hospital2').collection('bookings');
-    const contactCollection = client.db('hospital2').collection('contacts');
+    const bookingCollection = client
+      .db('hospitalWithBlood')
+      .collection('bookings');
+    const donnerCollection = client
+      .db('hospitalWithBlood')
+      .collection('donner');
 
     // // // // // // // // // // // //
 
@@ -240,24 +244,24 @@ async function run() {
       res.send(result);
     });
 
-    // post Contact
-    app.post('/contact', async (req, res) => {
+    // post donnerCollection
+    app.post('/donner', async (req, res) => {
       const newBooking = req.body;
-      const result = await contactCollection.insertOne(newBooking);
+      const result = await donnerCollection.insertOne(newBooking);
       res.send(result);
     });
-    // get contact
-    app.get('/contact', async (req, res) => {
+    // get donnerCollection
+    app.get('/donner', async (req, res) => {
       const query = {};
-      const cursor = contactCollection.find(query);
+      const cursor = donnerCollection.find(query);
       const users = await cursor.toArray();
       res.send(users);
     });
-    // Delete one contact
-    app.delete('/contacts/:id', async (req, res) => {
+    // Delete one donnerCollection
+    app.delete('/donner/:id', async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
-      const result = await contactCollection.deleteOne(query);
+      const result = await donnerCollection.deleteOne(query);
       res.send(result);
     });
   } finally {
