@@ -5,35 +5,14 @@ import Footer from '../../Share/Footer';
 
 const About = () => {
   const { pathname } = useLocation();
-  const value = 1;
+
 
     useEffect(() => {
       window.scrollTo(0, 0);
     }, [pathname]);
   return (
     <div className="pt-20">
-      <div
-        className={`
-      ${
-        value % 8 === 0
-          ? 'bg-red-600'
-          : value % 7 === 0
-          ? 'bg-blue-500'
-          : value % 6 === 0
-          ? 'bg-yellow-600'
-          : value % 5 === 0
-          ? 'bg-green-700'
-          : value % 4 === 0
-          ? 'bg-purple-500'
-          : value % 3 === 0
-          ? 'bg-pink-500'
-          : value % 2 === 0
-          ? 'bg-indigo-500'
-          : 'bg-lime-600'
-      }`}
-      >
-       
-      </div>
+     
       <div>
         <h1 className="text-4xl text-center mb-5 font-semibold text-primary">
           Welcome To Health Care

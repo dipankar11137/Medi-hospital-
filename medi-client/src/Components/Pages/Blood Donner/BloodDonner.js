@@ -29,7 +29,7 @@ const BloodDonner = ({donner,index}) => {
         <h1>{donner?.name}</h1>
         <h1>{donner?.phone}</h1>
         <h1>{donner?.address}</h1>
-        <button className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-xl mt-2">
+        <button className="btn btn-primary btn-sm text-white mt-3">
           Call Now
         </button>
       </div>

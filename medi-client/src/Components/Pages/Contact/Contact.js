@@ -10,7 +10,7 @@ const Contact = () => {
         <div>
           <h1 className="text-3xl mt-10 font-semibold">Address</h1>
           <p className="mt-2 text-2xl  text-rose-800 ">
-            Alok Hospital, Dhanmondi 14/A, Dhaka-1209, Dhaka, Bangladesh
+            Medi + , Dhanmondi 14/A, Dhaka-1209, Dhaka, Bangladesh
             Dhaka-1000
           </p>
         </div>
@@ -35,25 +35,25 @@ const Contact = () => {
         <div>
           <h1 className="text-3xl mt-10 font-semibold">Facebook</h1>
           <p className="mt-2 text-2xl  text-rose-800 cursor-pointer">
-            Alok Hospital
+             Medi +  Hospital
           </p>
         </div>
         <div>
           <h1 className="text-3xl mt-10 font-semibold">Address</h1>
           <p className="mt-2 text-2xl  text-rose-800 cursor-pointer">
-            Alok Hospital
+             Medi +  Hospital
           </p>
         </div>
         <div>
           <h1 className="text-3xl mt-10 font-semibold">Address</h1>
           <p className="mt-2 text-2xl  text-rose-800 cursor-pointer">
-            alokhospital@gmail.com
+            mediplushospital@gmail.com
           </p>
         </div>
         <div>
           <h1 className="text-3xl mt-10 font-semibold">Address</h1>
           <p className="mt-2 text-2xl  text-rose-800 cursor-pointer">
-            Alok Hospital
+             Medi +  Hospital
           </p>
         </div>
       </div>
