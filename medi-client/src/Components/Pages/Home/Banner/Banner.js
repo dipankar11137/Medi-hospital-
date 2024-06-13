@@ -42,7 +42,7 @@ const Banner = () => {
         <SwiperSlide>
           <div
             style={{
-              backgroundImage: `url('https://www.peerlesshospital.com/CMS/uploads/Banner/1706437897-desk.webp')`,
+              backgroundImage: `url('https://static.vecteezy.com/system/resources/thumbnails/027/605/072/small_2x/portrait-of-a-young-beautiful-woman-doctor-on-a-blue-background-photo.jpg')`,
               // backgroundImage: `url(${banner1})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
@@ -59,10 +59,7 @@ const Banner = () => {
               <p className="text-sm">
                 Investing in skill and experience for a better tomorrow.
               </p>
-              <div>
-              
-               
-              </div>
+              <div></div>
             </div>
           </div>
         </SwiperSlide>
@@ -87,10 +84,7 @@ const Banner = () => {
                 <br />
                 being, spanning three decades of exceptional healthcare.
               </p>
-              <div>
-             
-                
-              </div>
+              <div></div>
             </div>
           </div>
         </SwiperSlide>
@@ -116,10 +110,7 @@ const Banner = () => {
                 <br />
                 being, spanning three decades of exceptional healthcare.
               </p>
-              <div>
-             
-               
-              </div>
+              <div></div>
             </div>
           </div>
         </SwiperSlide>
