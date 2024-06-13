@@ -147,7 +147,7 @@ const Dashboard = () => {
                   >
                     {' '}
                     <Link
-                      to="/dashboard/addDoctor"
+                      to="/dashboard/showDonner"
                       className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2  hover:bg-red-400 rounded-md`}
                     >
                       <div>

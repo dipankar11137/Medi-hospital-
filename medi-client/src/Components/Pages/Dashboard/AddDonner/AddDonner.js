@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 
 const AddDonner = () => {
   const imageHostKey = 'c70a5fc10619997bd7315f2bf28d0f3e';
+  const [loading,setLoading]=useState(false)
   
   const [bloodGroup,setBloodGroup]=useState('')
     const {
@@ -15,7 +16,7 @@ const AddDonner = () => {
 
 
   const onSubmit = (data) => {
-
+    setLoading(true)
     const image = data.img[0];
     const formData = new FormData();
     formData.append('image', image);
@@ -44,6 +45,7 @@ const AddDonner = () => {
         })
           .then(res => res.json())
           .then(data => {
+            setLoading(false)
               toast.success('Add Donner');
             reset();
           });
@@ -53,7 +55,9 @@ const AddDonner = () => {
     <div className="flex justify-center mt-5">
       <div className="border-[1px] border-primary p-3 rounded-lg bg-slate-300 shadow-2xl">
         <div>
-          <h1 className='text-4xl text-center font-bold text-primary'>Add Donner</h1>
+          <h1 className="text-4xl text-center font-bold text-primary">
+            Add Donner
+          </h1>
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* name */}
@@ -170,11 +174,18 @@ const AddDonner = () => {
             </label>
           </div>
 
-          <input
-            className="btn btn-primary w-full text-white mt-3"
-            type="submit"
-            value="Post"
-          />
+          {loading ? (
+            <h1 className="btn btn-primary w-full text-white mt-3">
+              Loading ...
+            </h1>
+          ) : (
+            <input
+              className="btn btn-primary w-full text-white mt-3"
+              type="submit"
+              value="Post"
+              disabled={!bloodGroup}
+            />
+          )}
         </form>
       </div>
     </div>
