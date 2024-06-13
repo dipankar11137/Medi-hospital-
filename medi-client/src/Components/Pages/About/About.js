@@ -4,22 +4,45 @@ import { useLocation } from 'react-router-dom';
 import Footer from '../../Share/Footer';
 
 const About = () => {
-    const { pathname } = useLocation();
+  const { pathname } = useLocation();
+  const value = 1;
 
     useEffect(() => {
       window.scrollTo(0, 0);
     }, [pathname]);
   return (
     <div className="pt-20">
+      <div
+        className={`
+      ${
+        value % 8 === 0
+          ? 'bg-red-600'
+          : value % 7 === 0
+          ? 'bg-blue-500'
+          : value % 6 === 0
+          ? 'bg-yellow-600'
+          : value % 5 === 0
+          ? 'bg-green-700'
+          : value % 4 === 0
+          ? 'bg-purple-500'
+          : value % 3 === 0
+          ? 'bg-pink-500'
+          : value % 2 === 0
+          ? 'bg-indigo-500'
+          : 'bg-lime-600'
+      }`}
+      >
+       
+      </div>
       <div>
         <h1 className="text-4xl text-center mb-5 font-semibold text-primary">
           Welcome To Health Care
         </h1>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center ">
         <img
-          className="rounded-lg"
-          src="https://t4.ftcdn.net/jpg/06/55/41/29/360_F_655412969_nx1j9GbbLOqkeL1uVitx96DlFr0vzbAC.jpg"
+          className="rounded-lg h-[350px]"
+          src="https://t4.ftcdn.net/jpg/01/32/14/73/360_F_132147359_vv26IOOcnwZv7MjpOJVK6VXsGgzazDKk.jpg"
           alt=""
         />
       </div>

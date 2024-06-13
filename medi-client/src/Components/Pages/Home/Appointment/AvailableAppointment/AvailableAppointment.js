@@ -59,7 +59,7 @@ useEffect(() => {
     <div>
       <section className="mt-6  pb-20">
         {/* {today <= date ? <h1>Right</h1> : <h1>Wrong</h1>} */}
-        <div className="bg-primary bg-gradient-to-r from-accent to-primary p-5 rounded-xl shadow-2xl -mt-60 mx-40">
+        <div className="bg-primary bg-gradient-to-r from-accent to-sky-800 p-5 rounded-xl shadow-2xl -mt-60 mx-40">
           <div className="">
             {result ? (
               <p className="text-3xl  text-center mt-5 text-slate-50 font-bold mb-6">

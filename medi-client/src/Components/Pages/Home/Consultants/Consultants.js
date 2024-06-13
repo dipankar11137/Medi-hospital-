@@ -32,7 +32,7 @@ const Consultants = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: 'rgba(61, 61, 61, 0.3)',
+          backgroundColor: 'rgba(61, 61, 61, 0.2)',
         }}
         className="p-4 rounded-xl"
       >

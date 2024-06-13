@@ -11,8 +11,8 @@ const AppointmentBanner = ({ selectDate, setSelectDate }) => {
 
   return (
     <div className="pt-[67px]">
-      <div className="">
-        <div className="related relative">
+      <div className=" ">
+        {/* <div className="related relative">
           <div className="absolute top-0 left-0 z-10  h-[230px] px-24 py-20 text-slate-50 bg-gradient-to-r from-primary  to-accent shadow-inner">
             <h1 className="text-4xl font-semibold pr-20">Our Doctors</h1>
             <h1 className="text-xl">
@@ -26,12 +26,20 @@ const AppointmentBanner = ({ selectDate, setSelectDate }) => {
               className="relative z-0"
             />
           </div>
+        </div> */}
+
+        <div className="fixed top-20 animate-pulse right-0">
+          <img
+            src="https://png.pngtree.com/png-clipart/20230918/ourmid/pngtree-little-girl-doctor-with-stethoscope-cross-arms-on-chest-smiling-png-image_10133313.png"
+            alt=""
+            className=" h-32"
+          />
         </div>
         {/* change date */}
         <div className="flex justify-end mt-48 ">
           <label
             htmlFor="my_modal_7"
-            className="btn btn-sm text-white btn-accent mr-20"
+            className="btn btn-sm text-white btn-primary mr-20"
           >
             Change Date
           </label>

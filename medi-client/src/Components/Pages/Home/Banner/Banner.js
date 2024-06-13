@@ -42,30 +42,6 @@ const Banner = () => {
         <SwiperSlide>
           <div
             style={{
-              backgroundImage: `url('https://static.vecteezy.com/system/resources/thumbnails/027/605/072/small_2x/portrait-of-a-young-beautiful-woman-doctor-on-a-blue-background-photo.jpg')`,
-              // backgroundImage: `url(${banner1})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              width: '100%',
-            }}
-            className="h-[400px] md:h-[500px] flex items-center "
-          >
-            <div className=" ml-32 text-start">
-              <h1>Transforming to Futuristic Healthcare</h1>
-              <h2 className="text-4xl font-semibold">
-                Setting Benchmark <br />
-                in Clinical Excellence
-              </h2>
-              <p className="text-sm">
-                Investing in skill and experience for a better tomorrow.
-              </p>
-              <div></div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div
-            style={{
               backgroundImage: `url('https://www.peerlesshospital.com/CMS/uploads/Banner/1706437897-desk.webp')`,
               // backgroundImage: `url(${banner1})`,
               backgroundRepeat: 'no-repeat',
@@ -88,6 +64,31 @@ const Banner = () => {
             </div>
           </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div
+            style={{
+              backgroundImage: `url('https://static.vecteezy.com/system/resources/thumbnails/027/605/072/small_2x/portrait-of-a-young-beautiful-woman-doctor-on-a-blue-background-photo.jpg')`,
+              // backgroundImage: `url(${banner1})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              width: '100%',
+            }}
+            className="h-[400px] md:h-[500px] flex items-center "
+          >
+            <div className=" ml-32 text-start">
+              <h1>Transforming to Futuristic Healthcare</h1>
+              <h2 className="text-4xl font-semibold">
+                Setting Benchmark <br />
+                in Clinical Excellence
+              </h2>
+              <p className="text-sm">
+                Investing in skill and experience for a better tomorrow.
+              </p>
+              <div></div>
+            </div>
+          </div>
+        </SwiperSlide>
+
         <SwiperSlide>
           <div
             style={{

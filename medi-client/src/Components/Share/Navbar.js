@@ -79,10 +79,10 @@ const Navbar = () => {
         </div>
         <Link
           to="/"
-          className="btn btn-ghost  font-bold lg:text-3xl  sm:text-sm text-primary font-serif  uppercase"
+          className="btn btn-ghost  font-extrabold lg:text-3xl   sm:text-sm text-primary   uppercase"
         >
           <img className="h-12 mr-2" src="" alt="" />
-          Alok Hospital
+         Medi + 24/7
         </Link>
       </div>
       {/* <div className="navbar-center hidden lg:flex lg:pr-36 ml-40 text-indigo-900">
