@@ -37,6 +37,9 @@ const Navbar = () => {
             <Link to="/blood">Blood Donner</Link>
           </li>
           <li className=" hover:text-orange-600">
+            <Link to="/vaccine">Vaccine</Link>
+          </li>
+          <li className=" hover:text-orange-600">
             <Link to="/contact">Contact</Link>
           </li>
         </>

@@ -24,6 +24,7 @@ import ShowDonners from "./Components/Pages/Dashboard/ShowDonner/ShowDonners";
 import Appointment from "./Components/Pages/Home/Appointment/Appointment/Appointment";
 import DoctorDetails from "./Components/Pages/Home/DoctorDetails/DoctorDetails";
 import Home from './Components/Pages/Home/Home';
+import Vaccines from "./Components/Pages/Vaccine/Vaccines";
 import Header from "./Components/Share/Header";
 import Navbar from "./Components/Share/Navbar";
 import NotFound from './Components/Share/NotFound';
@@ -87,7 +88,15 @@ function App() {
             </RequireAuth>
           }
         />
-        <Route path="/doctorDetails/:id" element={<DoctorDetails/>} />
+        <Route
+          path="vaccine"
+          element={
+            <RequireAuth>
+              <Vaccines />
+            </RequireAuth>
+          }
+        />
+        <Route path="/doctorDetails/:id" element={<DoctorDetails />} />
         <Route path="/login" element={<Login />}></Route>
         <Route path="/*" element={<NotFound />}></Route>
 
