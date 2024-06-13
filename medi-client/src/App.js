@@ -11,6 +11,7 @@ import About from "./Components/Pages/About/About";
 import BloodDonners from "./Components/Pages/Blood Donner/BloodDonners";
 import Contact from "./Components/Pages/Contact/Contact";
 import AddDoctor from "./Components/Pages/Dashboard/AddDoctor/AddDoctor";
+import AddDonner from "./Components/Pages/Dashboard/AddDonner/AddDonner";
 import Bookings from "./Components/Pages/Dashboard/Boooking/Bookings";
 import ManageContacts from './Components/Pages/Dashboard/Contact.js/Manage Contact/ManageContacts';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
@@ -105,7 +106,7 @@ function App() {
           <Route path="editDoctor/:id" element={<EditDoctor />} />
           <Route path="manageContact" element={<ManageContacts />} />
           <Route path="profile" element={<Profile />} />
-          {/* <Route path="contact" element={<Contact />} /> */}
+          <Route path="addDonner" element={<AddDonner />} />
         </Route>
         {/* Dashboard End */}
       </Routes>

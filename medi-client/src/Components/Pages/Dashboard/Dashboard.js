@@ -2,7 +2,12 @@
 
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { FaUserMd, FaUserPlus } from 'react-icons/fa';
+import {
+  FaUserEdit,
+  FaUserFriends,
+  FaUserMd,
+  FaUserPlus,
+} from 'react-icons/fa';
 
 import {
   MdDashboard
@@ -80,7 +85,7 @@ const Dashboard = () => {
                     {' '}
                     <Link
                       to="/dashboard"
-                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2 hover:bg-indigo-400 rounded-md`}
+                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2 hover:bg-red-400 rounded-md`}
                     >
                       <div>
                         {React.createElement(MdDashboard, {
@@ -100,6 +105,68 @@ const Dashboard = () => {
                     </Link>
                   </div>
 
+                  {/* add donner */}
+                  <div
+                    onClick={() => setSelectedButton('Button a')}
+                    className={
+                      selectedButton === 'Button a'
+                        ? 'bg-white text-black w-[215px] rounded-lg'
+                        : ''
+                    }
+                  >
+                    {' '}
+                    <Link
+                      to="/dashboard/addDonner"
+                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2  hover:bg-red-400 rounded-md`}
+                    >
+                      <div>
+                        {React.createElement(FaUserFriends, {
+                          size: '24',
+                        })}
+                      </div>
+                      <h2
+                        style={{
+                          transitionDelay: `${0 + 3}00ms`,
+                        }}
+                        className={`whitespace-pre duration-500 ${
+                          !open && 'opacity-0 translate-x-28 overflow-hidden '
+                        }`}
+                      >
+                        Add Donner
+                      </h2>
+                    </Link>
+                  </div>
+                  {/* show donner */}
+                  <div
+                    onClick={() => setSelectedButton('Button d')}
+                    className={
+                      selectedButton === 'Button d'
+                        ? 'bg-white text-black w-[215px] rounded-lg'
+                        : ''
+                    }
+                  >
+                    {' '}
+                    <Link
+                      to="/dashboard/addDoctor"
+                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2  hover:bg-red-400 rounded-md`}
+                    >
+                      <div>
+                        {React.createElement(FaUserEdit, {
+                          size: '24',
+                        })}
+                      </div>
+                      <h2
+                        style={{
+                          transitionDelay: `${0 + 3}00ms`,
+                        }}
+                        className={`whitespace-pre duration-500 ${
+                          !open && 'opacity-0 translate-x-28 overflow-hidden '
+                        }`}
+                      >
+                        Manage Donner
+                      </h2>
+                    </Link>
+                  </div>
                   {/* add doctor */}
                   <div
                     onClick={() => setSelectedButton('Button 5')}
@@ -112,7 +179,7 @@ const Dashboard = () => {
                     {' '}
                     <Link
                       to="/dashboard/addDoctor"
-                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2  hover:bg-indigo-400 rounded-md`}
+                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2  hover:bg-red-400 rounded-md`}
                     >
                       <div>
                         {React.createElement(FaUserPlus, {
@@ -144,7 +211,7 @@ const Dashboard = () => {
                     {' '}
                     <Link
                       to="/dashboard/manageDoctor"
-                      className={`  group flex items-center text-xl w-[215px]  gap-3.5 font-medium p-2 hover:bg-indigo-400 rounded-md`}
+                      className={`  group flex items-center text-xl w-[215px]  gap-3.5 font-medium p-2 hover:bg-red-400 rounded-md`}
                     >
                       <div>
                         {React.createElement(FaUserMd, {
