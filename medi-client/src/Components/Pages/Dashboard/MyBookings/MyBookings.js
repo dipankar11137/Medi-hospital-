@@ -29,7 +29,7 @@ const MyBookings = () => {
     }
   };
   return (
-    <div className='mx-10'>
+    <div className="mx-10">
       <div className="px-1">
         <h1 className="text-3xl font-semibold text-center py-5 pr-20">
           My Booking
@@ -37,15 +37,15 @@ const MyBookings = () => {
         <div className="overflow-x-auto">
           <table className="table  w-full text-white">
             <thead>
-              <tr className="text-3xl bg-slate-900 text-center">
-                <th className="bg-slate-400 text-xl "></th>
-                <th className="bg-slate-400 text-xl border-r-2">Doctor Name</th>
-                <th className="bg-slate-400 text-xl border-r-2">Department</th>
-                <th className="bg-slate-400 text-xl border-r-2">Date</th>
-                <th className="bg-slate-400 text-xl border-r-2">Slot</th>
-                <th className="bg-slate-400 text-xl border-r-2">Payment</th>
-                <th className="bg-slate-400 text-xl border-r-2">Status</th>
-                <th className="bg-slate-400 text-xl">Remove</th>
+              <tr className="text-3xl bg-slate-900  text-center">
+                <th className="bg-secondary text-xl border-r-2"></th>
+                <th className="bg-accent text-xl border-r-2">Doctor Name</th>
+                <th className="bg-secondary  text-xl border-r-2">Department</th>
+                <th className="bg-accent text-xl border-r-2">Date</th>
+                <th className="bg-secondary  text-xl border-r-2">Slot</th>
+                <th className="bg-accent text-xl border-r-2">Payment</th>
+                <th className="bg-secondary  text-xl border-r-2">Status</th>
+                <th className="bg-accent text-xl">Remove</th>
               </tr>
             </thead>
             <tbody>

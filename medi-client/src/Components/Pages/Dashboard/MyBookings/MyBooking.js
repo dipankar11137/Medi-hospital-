@@ -11,7 +11,7 @@ const MyBooking = ({ booking, index, handleDelete }) => {
   console.log(booking)
   return (
     <tr className="text-center text-slate-800">
-      <th className="bg-slate-300">{index}</th>
+      <th className="bg-slate-300 border-r-2">{index}</th>
       <td className="bg-slate-300 border-r-2">
         <div className="flex items-center">
           <img className="w-14 h-14 rounded-md" src={booking?.img} alt="" />
