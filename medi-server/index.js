@@ -264,6 +264,37 @@ async function run() {
       const result = await donnerCollection.deleteOne(query);
       res.send(result);
     });
+    // donner time
+    app.put('/donner/:id/donnerTime', async (req, res) => {
+      try {
+        const donner = await donnerCollection.findById(req.params.id);
+        if (!donner) {
+          return res.status(404).send('Donner not found');
+        }
+
+        donner.donnerTime = true;
+        donner.donnerTimeSetAt = new Date();
+        await donner.save();
+
+        res.send(donner);
+      } catch (error) {
+        res.status(500).send(error.message);
+      }
+    });
+
+    cron.schedule('0 0 * * *', async () => {
+      const threeMonthsAgo = new Date();
+      threeMonthsAgo.setMonth(threeMonthsAgo.getMonth() - 3);
+
+      await Donner.updateMany(
+        { donnerTimeSetAt: { $lte: threeMonthsAgo } },
+        { $set: { donnerTime: false, donnerTimeSetAt: null } }
+      );
+    });
+
+    app.listen(5000, () => {
+      console.log('Server is running on port 5000');
+    });
   } finally {
   }
 }
