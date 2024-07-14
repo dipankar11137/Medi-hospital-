@@ -33,6 +33,9 @@ async function run() {
     const donnerCollection = client
       .db('hospitalWithBlood')
       .collection('donner');
+    const vaccineCollection = client
+      .db('hospitalWithBlood')
+      .collection('vaccine');
 
     // User routes
     app.put('/create-user/:email', async (req, res) => {
@@ -247,6 +250,35 @@ async function run() {
     //   );
     // });
 
+    // vaccine
+  //  app.post('/vaccine', async (req, res) => {
+  //    const newDonner = req.body;
+  //    const result = await vaccineCollection.insertOne(newDonner);
+  //    res.send(result);
+    //  });
+    
+     app.get('/vaccine', async (req, res) => {
+       const result = await vaccineCollection.find({}).toArray();
+       res.send(result);
+     });
+    
+    app.put('/vaccine/:id', async (req, res) => {
+      const id = req.params.id;
+      const updateData = req.body;
+
+      try {
+        const result = await vaccineCollection.updateOne(
+          { _id: ObjectId(id) },
+          { $set: updateData },
+          { upsert: true }
+        );
+        res.send(result);
+      } catch (error) {
+        res.status(500).send({ message: 'Error updating the document', error });
+      }
+    });
+
+
     app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
     });
@@ -260,6 +292,65 @@ run().catch(console.dir);
 app.get('/', (req, res) => {
   res.send('Running Medi+ ');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const express = require('express');
 // const cors = require('cors');
