@@ -18,7 +18,7 @@ const EditDoctor = () => {
   const navigator=useNavigate()
    const { id } = useParams();
    useEffect(() => {
-     fetch(`http://localhost:5000/doctor/${id}`)
+     fetch(`http://localhost:5006/doctor/${id}`)
        .then(res => res.json())
        .then(data => setDoctor(data));
    }, [doctor, id]);
@@ -86,7 +86,7 @@ useEffect(() => {
       slots:doctor.slots||slots
     };
   
-      fetch(`http://localhost:5000/updateDoctor/${id}`, {
+      fetch(`http://localhost:5006/updateDoctor/${id}`, {
         method: 'PUT',
         headers: {
           'content-type': 'application/json',

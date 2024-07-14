@@ -28,13 +28,13 @@ const AvailableAppointment = ({ selectDate }) => {
 
   const result = isLongerDate(date, today);
    useEffect(() => {
-     fetch(`http://localhost:5000/doctor`)
+     fetch(`http://localhost:5006/doctor`)
        .then(res => res.json())
        .then(data => setDepartments(data));
    }, [departments]);
   
 useEffect(() => {
-  let url = `http://localhost:5000/appointments?date=${date}`;
+  let url = `http://localhost:5006/appointments?date=${date}`;
   if (department) {
     url += `&department=${department}`;
   }

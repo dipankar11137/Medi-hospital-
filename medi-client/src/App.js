@@ -15,6 +15,7 @@ import AddDonner from "./Components/Pages/Dashboard/AddDonner/AddDonner";
 import Bookings from "./Components/Pages/Dashboard/Boooking/Bookings";
 import ManageContacts from './Components/Pages/Dashboard/Contact.js/Manage Contact/ManageContacts';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
+import ManageVaccine from "./Components/Pages/Dashboard/Manage Vaccine/ManageVaccine";
 import EditDoctor from "./Components/Pages/Dashboard/ManageDoctor/EditDoctor";
 import ManageDoctors from "./Components/Pages/Dashboard/ManageDoctor/ManageDoctors";
 import MyBookings from './Components/Pages/Dashboard/MyBookings/MyBookings';
@@ -118,6 +119,7 @@ function App() {
           <Route path="profile" element={<Profile />} />
           <Route path="addDonner" element={<AddDonner />} />
           <Route path="showDonner" element={<ShowDonners />} />
+          <Route path="manageVaccine" element={<ManageVaccine />} />
         </Route>
         {/* Dashboard End */}
       </Routes>

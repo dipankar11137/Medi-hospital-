@@ -14,22 +14,22 @@ const Bookings = () => {
 
   // const formattedDate = formatDate(date);
   // if (date) {
-  //   fetch(`http://localhost:5000/bookingDate/${formattedDate}`)
+  //   fetch(`http://localhost:5006/bookingDate/${formattedDate}`)
   //     .then(res => res.json())
   //     .then(data => setBooking(data));
   // } else {
-  //   fetch('http://localhost:5000/bookings')
+  //   fetch('http://localhost:5006/bookings')
   //     .then(res => res.json())
   //     .then(data => setBooking(data));
   // }
   useEffect(() => {
-    fetch('http://localhost:5000/bookings')
+    fetch('http://localhost:5006/bookings')
       .then(res => res.json())
       .then(data => setBooking(data));
   }, [bookings]);
 
   // useEffect(() => {
-  //   fetch(`http://localhost:5000/bookingDate/${formattedDate}`)
+  //   fetch(`http://localhost:5006/bookingDate/${formattedDate}`)
   //     .then(res => res.json())
   //     .then(data => setBooking(data));
   // }, [formattedDate]);
@@ -37,7 +37,7 @@ const Bookings = () => {
   const handleDelete = id => {
     const proceed = window.confirm('Are You Sure ?');
     if (proceed) {
-      const url = `http://localhost:5000/bookings/${id}`;
+      const url = `http://localhost:5006/bookings/${id}`;
       fetch(url, {
         method: 'DELETE',
       })
@@ -52,7 +52,7 @@ const Bookings = () => {
 
   const handleAccept = id => {
     const updateAccept = { accept: true };
-    fetch(`http://localhost:5000/bookingAccept/${id}`, {
+    fetch(`http://localhost:5006/bookingAccept/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',

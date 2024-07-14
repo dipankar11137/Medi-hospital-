@@ -8,7 +8,7 @@ const MyBookings = () => {
   const [users] = useAuthState(auth);
   const [bookings, setBooking] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/myBookings/${users?.email}`)
+    fetch(`http://localhost:5006/myBookings/${users?.email}`)
       .then(res => res.json())
       .then(data => setBooking(data));
   }, [bookings, users?.email]);
@@ -16,7 +16,7 @@ const MyBookings = () => {
   const handleDelete = id => {
     const proceed = window.confirm('Are You Sure ?');
     if (proceed) {
-      const url = `http://localhost:5000/bookings/${id}`;
+      const url = `http://localhost:5006/bookings/${id}`;
       fetch(url, {
         method: 'DELETE',
       })

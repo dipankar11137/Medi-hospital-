@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myBookings/${email}`)
+    fetch(`http://localhost:5006/myBookings/${email}`)
       .then(res => res.json())
       .then(data => setBooking(data));
   }, [booking, email]);

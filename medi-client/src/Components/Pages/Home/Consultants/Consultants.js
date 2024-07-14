@@ -6,7 +6,7 @@ const Consultants = () => {
   const [doctors, setDoctors] = useState([]);
   const navigator = useNavigate();
   useEffect(() => {
-    fetch(`http://localhost:5000/doctor`)
+    fetch(`http://localhost:5006/doctor`)
       .then(res => res.json())
       .then(data => setDoctors(data));
   }, [doctors]);

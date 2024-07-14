@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import {
+  FaSyringe,
   FaUserEdit,
   FaUserFriends,
   FaUserMd,
@@ -85,7 +86,7 @@ const Dashboard = () => {
                     {' '}
                     <Link
                       to="/dashboard"
-                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2 hover:bg-red-400 rounded-md`}
+                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2 hover:bg-red-100 rounded-md`}
                     >
                       <div>
                         {React.createElement(MdDashboard, {
@@ -117,7 +118,7 @@ const Dashboard = () => {
                     {' '}
                     <Link
                       to="/dashboard/addDonner"
-                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2  hover:bg-red-400 rounded-md`}
+                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2  hover:bg-red-100 rounded-md`}
                     >
                       <div>
                         {React.createElement(FaUserFriends, {
@@ -148,7 +149,7 @@ const Dashboard = () => {
                     {' '}
                     <Link
                       to="/dashboard/showDonner"
-                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2  hover:bg-red-400 rounded-md`}
+                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2  hover:bg-red-100 rounded-md`}
                     >
                       <div>
                         {React.createElement(FaUserEdit, {
@@ -179,7 +180,7 @@ const Dashboard = () => {
                     {' '}
                     <Link
                       to="/dashboard/addDoctor"
-                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2  hover:bg-red-400 rounded-md`}
+                      className={`  group flex items-center text-xl w-[215px] gap-3.5 font-medium p-2  hover:bg-red-100 rounded-md`}
                     >
                       <div>
                         {React.createElement(FaUserPlus, {
@@ -211,7 +212,7 @@ const Dashboard = () => {
                     {' '}
                     <Link
                       to="/dashboard/manageDoctor"
-                      className={`  group flex items-center text-xl w-[215px]  gap-3.5 font-medium p-2 hover:bg-red-400 rounded-md`}
+                      className={`  group flex items-center text-xl w-[215px]  gap-3.5 font-medium p-2 hover:bg-red-100 rounded-md`}
                     >
                       <div>
                         {React.createElement(FaUserMd, {
@@ -228,6 +229,38 @@ const Dashboard = () => {
                         }`}
                       >
                         Manage Doctor
+                      </h2>
+                    </Link>
+                  </div>
+                  {/* Manage Vaccine*/}
+                  <div
+                    onClick={() => setSelectedButton('Button 7')}
+                    className={
+                      selectedButton === 'Button 7'
+                        ? 'bg-white w-[215px] text-black rounded-lg '
+                        : ''
+                    }
+                  >
+                    {' '}
+                    <Link
+                      to="/dashboard/ManageVaccine"
+                      className={`  group flex items-center text-xl w-[215px]  gap-3.5 font-medium p-2 hover:bg-red-100 rounded-md`}
+                    >
+                      <div>
+                        {React.createElement(FaSyringe, {
+                          size: '20',
+                        })}
+                      </div>
+                      <h2
+                        style={{
+                          transitionDelay: `${0 + 3}00ms`,
+                        }}
+                        className={`whitespace-pre duration-500 ${
+                          !open &&
+                          'opacity-0 translate-x-28 overflow-hidden w-[215px]'
+                        }`}
+                      >
+                        Manage Vaccine
                       </h2>
                     </Link>
                   </div>

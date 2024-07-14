@@ -7,7 +7,7 @@ const Payment = () => {
   const { id } = useParams('');
   const [buyProduct, setBuyProduct] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/buy/${id}`)
+    fetch(`http://localhost:5006/buy/${id}`)
       .then(res => res.json())
       .then(data => setBuyProduct(data));
   }, [buyProduct, id]);
@@ -28,7 +28,7 @@ const Payment = () => {
   };
   const handleVCode = () => {
     const updatePayment = { payment: true };
-    fetch(`http://localhost:5000/buyPayment/${id}`, {
+    fetch(`http://localhost:5006/buyPayment/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',

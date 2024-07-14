@@ -32,7 +32,7 @@ const BookingModal = ({ counseling, selectDate, setCounseling, refetch }) => {
       img
     };
 
-    fetch("http://localhost:5000/bookings", {
+    fetch("http://localhost:5006/bookings", {
       method: "POST",
       headers: {
         "content-type": "application/json",

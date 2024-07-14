@@ -10,7 +10,7 @@ const Contact = () => {
     reset,
   } = useForm();
   const onSubmit = data => {
-    fetch(`http://localhost:5000/contact`, {
+    fetch(`http://localhost:5006/contact`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

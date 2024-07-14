@@ -5,7 +5,7 @@ import ShowDonner from './ShowDonner';
 const ShowDonners = () => {
    const [donners, setDonner] = useState([]);
    useEffect(() => {
-     fetch(`http://localhost:5000/donner`)
+     fetch(`http://localhost:5006/donner`)
        .then(res => res.json())
        .then(data => setDonner(data));
    }, [donners]);
@@ -14,7 +14,7 @@ const ShowDonners = () => {
    const handleDelete = id => {
      const proceed = window.confirm('Are You Sure ?');
      if (proceed) {
-       const url = `http://localhost:5000/donner/${id}`;
+       const url = `http://localhost:5006/donner/${id}`;
        fetch(url, {
          method: 'DELETE',
        })
@@ -25,13 +25,28 @@ const ShowDonners = () => {
            toast.success('Successfully Delete');
          });
      }
-   };
+  };
+  
+ const handleDonnerTime = id => {
+   fetch(`http://localhost:5006/donner/${id}/donnerTime`, {
+     method: 'PUT',
+   })
+     .then(res => res.json())
+     .then(data => {
+       setDonner(prevState =>
+         prevState.map(donner =>
+           donner._id === id ? { ...donner, donnerTime: true } : donner
+         )
+       );
+       toast.success('Donner time updated successfully');
+     });
+ };
   return (
     <div className="mx-7">
       <div>
         <h1 className="text-3xl m-2 font-semibold text-indigo-900">
           {' '}
-          All Doctors
+          All Donner
         </h1>
       </div>
       <div className="overflow-x-auto">
@@ -39,16 +54,18 @@ const ShowDonners = () => {
           <thead>
             <tr className="text-3xl bg-slate-900 text-center ">
               <th className="bg-indigo-700 text-[30px] text-primary"></th>
-              <th className="bg-indigo-300 text-[17px] text-primary">
-                 Name
-              </th>
+              <th className="bg-indigo-300 text-[17px] text-primary">Name</th>
               <th className="bg-indigo-400  text-[17px] text-primary">
                 Location
               </th>
 
-              <th className="bg-indigo-300  text-[17px] text-primary">Blood Group</th>
+              <th className="bg-indigo-300  text-[17px] text-primary">
+                Blood Group
+              </th>
               <th className="bg-indigo-400  text-[17px] text-primary">Phone</th>
-              <th className="bg-indigo-300  text-[17px] text-primary">Status</th>
+              <th className="bg-indigo-300  text-[17px] text-primary">
+                Status
+              </th>
               <th className="bg-indigo-400  text-[17px] text-primary">
                 Delete
               </th>
@@ -61,6 +78,7 @@ const ShowDonners = () => {
                 donner={donner}
                 index={index + 1}
                 handleDelete={handleDelete}
+                handleDonnerTime={handleDonnerTime}
               ></ShowDonner>
             ))}
           </tbody>

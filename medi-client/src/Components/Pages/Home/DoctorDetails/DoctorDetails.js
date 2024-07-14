@@ -8,7 +8,7 @@ const DoctorDetails = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/doctor/${id}`)
+    fetch(`http://localhost:5006/doctor/${id}`)
       .then(res => res.json())
       .then(data => setDoctor(data));
   }, [doctor, id]);

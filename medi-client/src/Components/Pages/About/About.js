@@ -15,7 +15,7 @@ const About = () => {
      
       <div>
         <h1 className="text-4xl text-center mb-5 font-semibold text-primary">
-          Welcome To Health Care
+          Welcome To Health Care 
         </h1>
       </div>
       <div className="flex justify-center ">
@@ -34,7 +34,7 @@ const About = () => {
           recusandae laudantium maxime unde veritatis! Beatae ad placeat fugiat
           blanditiis eum aut exercitationem nam, ea architecto perspiciatis. Ab
           architecto laudantium quibusdam unde nulla numquam repellat rem,
-          consequuntur
+          consequuntur.
         </h1>
       </div>
 

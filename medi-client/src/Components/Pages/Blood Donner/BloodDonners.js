@@ -9,7 +9,7 @@ const BloodDonners = () => {
 
  // Fetch all donors once
  useEffect(() => {
-   fetch(`http://localhost:5000/donner`)
+   fetch(`http://localhost:5006/donner`)
      .then(res => res.json())
      .then(data => {
        setAllDonner(data);

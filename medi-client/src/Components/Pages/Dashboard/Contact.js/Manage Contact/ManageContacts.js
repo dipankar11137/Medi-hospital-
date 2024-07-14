@@ -5,7 +5,7 @@ import ManageContact from './ManageContact';
 const ManageContacts = () => {
   const [contacts, setContact] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/contact')
+    fetch('http://localhost:5006/contact')
       .then(res => res.json())
       .then(data => setContact(data));
   }, [contacts]);
@@ -13,7 +13,7 @@ const ManageContacts = () => {
   const handleDelete = id => {
     const proceed = window.confirm('Are You Sure ?');
     if (proceed) {
-      const url = `http://localhost:5000/contacts/${id}`;
+      const url = `http://localhost:5006/contacts/${id}`;
       fetch(url, {
         method: 'DELETE',
       })

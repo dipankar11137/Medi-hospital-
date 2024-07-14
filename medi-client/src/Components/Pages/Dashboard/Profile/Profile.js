@@ -10,7 +10,7 @@ const Profile = () => {
   const [dbUser, setDbUser] = useState([]);
   console.log(authUser?.email);
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${authUser?.email}`)
+    fetch(`http://localhost:5006/user/${authUser?.email}`)
       .then(res => res.json())
       .then(data => setDbUser(data));
   }, [dbUser, authUser]);
@@ -36,7 +36,7 @@ const Profile = () => {
       email,
     };
 
-    fetch(`http://localhost:5000/create-user/${email}`, {
+    fetch(`http://localhost:5006/create-user/${email}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',

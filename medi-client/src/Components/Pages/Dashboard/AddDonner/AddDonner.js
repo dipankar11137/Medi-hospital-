@@ -36,7 +36,7 @@ const AddDonner = () => {
         };
 
         console.log('aci',updateUrl);
-        fetch(`http://localhost:5000/donner`, {
+        fetch(`http://localhost:5006/donner`, {
           method: 'POST',
           headers: {
             'content-type': 'application/json',

@@ -96,7 +96,7 @@ const [loading,setLoading]=useState(false)
         console.log(changeUrl);
 
         const serverResponse = await fetch(
-          'http://localhost:5000/appointments',
+          'http://localhost:5006/appointments',
           {
             method: 'POST',
             headers: {
@@ -157,7 +157,7 @@ const [loading,setLoading]=useState(false)
   //         };
   //         // console.log(changeUrl);
 
-  //         fetch(`http://localhost:5000/appointments`, {
+  //         fetch(`http://localhost:5006/appointments`, {
   //           method: 'POST',
   //           headers: {
   //             'content-type': 'application/json',

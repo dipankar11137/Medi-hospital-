@@ -7,7 +7,7 @@ const ManageDoctors = () => {
   const [doctors, setDoctors] = useState([]);
   const navigator=useNavigate()
    useEffect(() => {
-     fetch(`http://localhost:5000/doctor`)
+     fetch(`http://localhost:5006/doctor`)
        .then(res => res.json())
        .then(data => setDoctors(data));
    }, [doctors]);
@@ -18,7 +18,7 @@ const ManageDoctors = () => {
   const handleDelete = (id) => {
        const proceed = window.confirm('Are You Sure ?');
        if (proceed) {
-         const url = `http://localhost:5000/doctorDelete/${id}`;
+         const url = `http://localhost:5006/doctorDelete/${id}`;
          fetch(url, {
            method: 'DELETE',
          })
